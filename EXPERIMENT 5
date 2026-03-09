@@ -1,0 +1,60 @@
+AIM
+
+To demonstrate tuple operations in Python such as accessing elements, finding length, counting elements, finding index, maximum and minimum values, sorting, reversing and looping through tuple elements.
+
+Algorithm
+
+Start the program.
+Create two tuples named students and marks.
+Access and display the first and second elements of the students tuple.
+Find the length of the tuple using len().
+Count the occurrence of a value in the tuple.
+Find the index of a specific element.
+Display the maximum and minimum values from the marks tuple.
+Sort the marks tuple and display it.
+Reverse the marks tuple.
+Traverse the students tuple using a loop and display each element.
+Stop the program.
+
+SOURCE CODE
+
+students = ("Roy", 21, "Arpit", "Ram")
+marks = (21, 54, 95, 56, 67)
+
+print("First element:", students[0])
+print("Second element:", students[1])
+
+print("Length of tuple:", len(students))
+
+print("Count of Roy:", students.count("Roy"))
+
+print("Index of 21:", students.index(21))
+
+print("The max element:", max(marks))
+
+print("The min element:", min(marks))
+
+print("Sorted tuple:", sorted(marks))
+
+print("Reversed:", list(reversed(marks)))
+
+print("Looping through tuple:")
+for item in students:
+    print(item)
+
+OUTPUT :
+
+First element: Roy
+Second element: 21
+Length of tuple: 4
+Count of Roy: 1
+Index of 21: 1
+The max element: 95
+The min element: 21
+Sorted tuple: [21, 54, 56, 67, 95]
+Reversed: [67, 56, 95, 54, 21]
+Looping through tuple:
+Roy
+21
+Arpit
+Ram
