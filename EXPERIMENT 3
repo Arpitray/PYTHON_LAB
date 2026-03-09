@@ -1,0 +1,61 @@
+AIM
+
+To perform basic string operations in Python such as reversing a string, counting characters, checking palindrome, converting case, checking substring and counting vowels.
+
+Algorithm
+
+Start the program.
+Assign a string value.
+Reverse the string using slicing.
+Find the number of characters using len() function.
+Check whether the string is a palindrome.
+Convert the string to uppercase and lowercase.
+Count the vowels using a loop.
+Check if a substring exists in the string.
+Display all results and stop the program.
+
+SOURCE CODE
+
+s = "Helloworld"
+print(s[::-1])
+
+s = "HELLOWORLD"
+count = len(s)
+print(count)
+
+s = "Helloworld"
+if s == s[::-1]:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+s = "Helloworld"
+print(s.upper())
+
+s = "HELLOWORLD"
+print(s.lower())
+
+s = "HELLOWORLD"
+vowels = "aeiouAEIOU"
+count = 0
+for ch in s:
+    if ch in vowels:
+        count += 1
+print("Number of vowels:", count)
+
+s = "HELLOWORLD"
+sub = "WORLD"
+if s.count(sub) > 0:
+    print("Substring exists")
+else:
+    print("Substring doesn't exist")
+
+OUTPUT :
+
+dlrowolleH
+10
+Not a palindrome
+HELLOWORLD
+helloworld
+Number of vowels: 3
+Substring exists
