@@ -1,0 +1,102 @@
+AIM
+
+To perform different list operations in Python such as accessing elements, inserting items, copying list, extending list, finding index, sorting, reversing, popping, counting and slicing.
+
+Algorithm
+
+Start the program.
+Create a list containing employee details.
+Access and print an element from the list using index.
+Insert a new role into the list using append.
+Display all elements using a loop.
+Create a copy of the list and display it.
+Extend the list with new employee details.
+Find the index of a particular element.
+Sort the list and display it.
+Reverse the list order.
+Remove the last element using pop.
+Count the occurrence of an element.
+Slice the list and display the result.
+Stop the program.
+
+SOURCE CODE
+
+emp = ["Arpit", "mumbai", "developer"]
+
+print(emp[1])
+
+def emprole():
+    role = input("Enter the role to insert:")
+    emp.append(role)
+    print("employee is a", role)
+
+emprole()
+
+for i in emp:
+    print(i)
+
+def copies():
+    updatedlist = emp.copy()
+    print(updatedlist)
+
+copies()
+
+def Extending():
+    newemp = ["rohan", 23456, "engineer"]
+    emp.extend(newemp)
+    print(emp)
+
+Extending()
+
+def findIndex():
+    print(emp.index("developer"))
+
+findIndex()
+
+def sorting():
+    emp.sort(key=str)
+    print(emp)
+
+sorting()
+
+def reversing():
+    emp.reverse()
+    print(emp)
+
+reversing()
+
+def popping():
+    emp.pop(-1)
+    print(emp)
+
+popping()
+
+def counting():
+    number = emp.count("Arpit")
+    print(number)
+
+counting()
+
+def slicing():
+    sliced = emp[0:2:1]
+    print(sliced)
+
+slicing()
+
+OUTPUT :
+
+mumbai
+Enter the role to insert: tester
+employee is a tester
+Arpit
+mumbai
+developer
+tester
+['Arpit', 'mumbai', 'developer', 'tester']
+['Arpit', 'mumbai', 'developer', 'tester', 'rohan', 23456, 'engineer']
+2
+[23456, 'Arpit', 'developer', 'engineer', 'mumbai', 'rohan', 'tester']
+['tester', 'rohan', 'mumbai', 'engineer', 'developer', 'Arpit', 23456]
+['tester', 'rohan', 'mumbai', 'engineer', 'developer', 'Arpit']
+1
+['tester', 'rohan']
