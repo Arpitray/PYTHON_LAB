@@ -1,0 +1,68 @@
+AIM
+
+To calculate batting strike rate, bowling economy and evaluate the performance of a cricketer using Python conditional statements.
+
+Algorithm
+Start the program.
+Take runs scored and number of balls faced as input.
+Calculate strike rate using the formula: runs divided by balls multiplied by 100.
+Check the batting performance using conditions and display the result.
+
+Next take runs conceded, number of overs and wickets taken as input.
+Calculate bowling economy by dividing runs conceded by overs.
+Use conditions to determine whether the bowler is excellent, good or poor.
+
+Then take number of catches as input.
+If catches are greater than or equal to one, display active fielder.
+Otherwise display needs improvement.
+Stop the program.
+
+SOURCE CODE
+
+runs = int(input("Enter runs:"))
+balls = int(input("Enter the number of balls faced:"))
+
+strike_rate = runs/balls * 100
+
+if runs > 50 and strike_rate > 120:
+    print("Excellent Batter")
+elif runs > 30 and strike_rate > 100:
+    print("Good Batter")
+elif runs > 20:
+    print("Average Batter")
+else:
+    print("Poor Batter")
+
+runs_conceded = int(input("Enter runs conceded:"))
+overs = int(input("Enter overs:"))
+wickets = int(input("Enter wickets taken:"))
+
+economy = runs_conceded/overs
+
+if wickets >= 3 and economy < 6:
+    print("Excellent Bowler")
+elif wickets >= 2 and economy < 8:
+    print("Good Bowler")
+else:
+    print("Poor Bowler")
+
+catches = int(input("Enter number of catches:"))
+
+if catches >= 1:
+    print("Active Fielder")
+else:
+    print("Needs Improvement")
+
+OUTPUT :
+
+Enter runs:149
+Enter the number of balls faced:29
+Excellent Batter
+
+Enter runs conceded:29
+Enter overs:6
+Enter wickets taken:3
+Good Bowler
+
+Enter number of catches:4
+Active Fielder
