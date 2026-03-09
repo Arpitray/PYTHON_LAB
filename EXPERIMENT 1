@@ -1,0 +1,77 @@
+AIM
+
+To demonstrate various data types and operators in Python such as arithmetic identities, bitwise operators, addition and subtraction properties.
+
+Algorithm
+Start the program now.
+We need to assign two integer variables: a is 208 and b is 600.
+Next we have to print the heading that says we are going to verify some equations.
+We will use Python to verify some algebra things and print the results.
+Then we need to print the heading for the part about bitwise operators.
+Now we do some bitwise operations using the or. And xor operators and we check how they are related to each other.
+After that we print the heading for the part about addition.
+We will verify that addition works correctly using bitwise operators.
+Next we print the heading for the part, about subtraction.
+We will use bitwise expressions to verify that subtraction works correctly.
+Finally we display the results of all the expressions we did.
+The program ends here.
+
+SOURCE CODE
+a = 208
+b = 600
+
+print("In equation Assignment operators:\n")
+
+print((a+b)**2 == a**2 + 2*(a*b) + b**2)
+print((a-b)**2 == a**2 - 2*(a*b) + b**2)
+print((a+b)*(a+b) == 2*(a**2 - b**2))
+print((a+b)+(a-b) == a*2)
+print((a**3 + b**3) == (a+b)*(a**2 - a*b + b**2))
+
+print("In Bitwise operators")
+
+print(a | b == (a ^ b) + (a & b))
+print(a ^ (a & b) == (a | b) ^ b)
+print(b ^ (a & b) == (a | b) ^ a)
+print((a & b) ^ (a | b) == a ^ b)
+
+print("In Addition\n")
+
+print((a+b) == (a|b) + (a&b))
+print(a+b == (a^b) + 2*(a&b))
+
+print("In Subtraction\n")
+
+print(a-b == (a ^ (a & b)) - ((a | b) ^ a))
+print(a-b == ((a | b) ^ b) - (b ^ (a & b)))
+print(a-b == (a ^ (a & b)) - (b ^ (a & b)))
+print(a-b == ((a | b) ^ b) - ((a | b) ^ a))
+
+
+OUTPUT :
+
+In equation Assignment operators:
+
+True
+True
+False
+True
+True
+
+In Bitwise operators
+True
+True
+True
+True
+
+In Addition
+
+True
+True
+
+In Subtraction
+
+True
+True
+True
+True
