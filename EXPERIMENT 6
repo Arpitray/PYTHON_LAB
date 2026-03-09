@@ -1,0 +1,64 @@
+AIM
+
+To demonstrate basic dictionary operations in Python such as accessing values, retrieving keys and values, updating elements, checking length, copying dictionary, clearing elements and iterating through dictionary items.
+
+Algorithm
+
+Start the program.
+Create a dictionary named students containing name, age, course and city.
+Create another dictionary named marks containing subject marks.
+Access and display values from the dictionary using keys.
+Display all keys from the dictionary.
+Display all values from the dictionary.
+Display key-value pairs using items().
+Find the length of the dictionary.
+Update a value in the dictionary.
+Create a copy of the dictionary.
+Loop through the dictionary and print each key.
+Stop the program.
+
+SOURCE CODE
+students = {"name":"Roy","age":21,"course":"Python","city":"Bangalore"}
+
+marks = {"math":78,"science":88,"english":67,"history":90}
+
+print("Student name:", students["name"])
+
+print("Student age:", students.get("age"))
+
+print("Dictionary keys:", students.keys())
+
+print("Dictionary values:", students.values())
+
+print("Dictionary items:", students.items())
+
+print("Length of dictionary:", len(students))
+
+students.update({"age":22})
+print("Updated dictionary:", students)
+
+print("Copied dictionary:", students.copy())
+
+print("Marks keys:", marks.keys())
+
+print("Marks values:", marks.values())
+
+print("Looping through dictionary:")
+for key in students:
+    print(key, students[key])
+OUTPUT
+Student name: Roy
+Student age: 21
+Dictionary keys: dict_keys(['name', 'age', 'course', 'city'])
+Dictionary values: dict_values(['Roy', 21, 'Python', 'Bangalore'])
+Dictionary items: dict_items([('name', 'Roy'), ('age', 21), ('course', 'Python'), ('city', 'Bangalore')])
+Length of dictionary: 4
+Updated dictionary: {'name': 'Roy', 'age': 22, 'course': 'Python', 'city': 'Bangalore'}
+Copied dictionary: {'name': 'Roy', 'age': 22, 'course': 'Python', 'city': 'Bangalore'}
+Marks keys: dict_keys(['math', 'science', 'english', 'history'])
+Marks values: dict_values([78, 88, 67, 90])
+Looping through dictionary:
+name Roy
+age 22
+course Python
+city Bangalore
