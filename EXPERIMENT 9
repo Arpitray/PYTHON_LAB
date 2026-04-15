@@ -1,0 +1,58 @@
+AIM:
+To create a DataFrame using pandas and perform basic data analysis and visualization using matplotlib.
+
+Algorithm:
+Start the program.
+Import pandas and matplotlib libraries.
+Create a dataset using dictionary format.
+Convert the dataset into a DataFrame.
+Display the DataFrame.
+Group the data based on department.
+Calculate average salary using mean().
+Plot the result using bar graph.
+Label the axes and title.
+Display the graph.
+Stop the program.
+
+SOURCE CODE:
+import pandas as pd
+import matplotlib.pyplot as mt
+
+data = {
+    "Name": ["Arpit", "Diya", "Rohan"],
+    "Age": [25, 28, 30],
+    "Gender": ["M", "F", "M"],
+    "City": ["Bangalore", "Mumbai", "Delhi"],
+    "Salary": [50000, 60000, 75000],
+    "Department": ["IT", "HR", "Finance"],
+    "Experience": [2, 4, 6],
+    "Joining Year": [2022, 2020, 2018],
+    "Performance Rating": [3.5, 4.2, 4.8],
+    "Full Time": ["Yes", "Yes", "Yes"]
+}
+
+df = pd.DataFrame(data)
+print(df)
+
+dept_salary = df.groupby("Department")["Salary"].mean()
+print(dept_salary)
+
+dept_salary.plot(kind="bar", color="skyblue")
+
+mt.title("Average Salary by Department")
+mt.xlabel("Department")
+mt.ylabel("Average Salary")
+
+mt.show()
+
+OUTPUT:
+    Name  Age Gender       City  Salary Department  Experience  Joining Year  Performance Rating Full Time
+0  Arpit   25      M  Bangalore   50000         IT           2          2022                 3.5       Yes
+1   Diya   28      F     Mumbai   60000         HR           4          2020                 4.2       Yes
+2  Rohan   30      M      Delhi   75000    Finance           6          2018                 4.8       Yes
+
+Department
+Finance    75000.0
+HR         60000.0
+IT         50000.0
+Name: Salary, dtype: float64
