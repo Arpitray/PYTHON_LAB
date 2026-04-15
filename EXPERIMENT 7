@@ -1,0 +1,56 @@
+AIM -> To create a class in Python and demonstrate object creation and methods to calculate total marks.
+
+Algorithm:
+Start the program.
+Define a class named Student.
+Initialize name, USN and marks using input.
+Create a method to calculate total marks.
+Display total marks along with student details.
+Create an object of the class.
+Call the method using the object.
+Stop the program.
+
+SOURCE CODE:
+
+class Student:
+    name = "Arpit"
+    age = 20
+    address = "Bangalore"
+
+details = Student()
+
+print("Name is", details.name)
+print("Age is", details.age)
+print("Address is", details.address)
+
+
+class student:
+
+    def __init__(self):
+        self.name = input("Enter the name:")
+        self.usn = input("Enter the USN:")
+        self.marks1 = int(input("Enter the marks1:"))
+        self.marks2 = int(input("Enter the marks2:"))
+        self.marks3 = int(input("Enter the marks3:"))
+
+    def total_marks(self):
+        print("Total marks:", self.marks1 + self.marks2 + self.marks3)
+        print("Name:", self.name)
+        print("USN:", self.usn)
+
+
+obj = student()
+obj.total_marks()
+OUTPUT:
+Name is Arpit
+Age is 20
+Address is Bangalore
+
+Enter the name: Arpit
+Enter the USN: 24BCA0488
+Enter the marks1: 100
+Enter the marks2: 50
+Enter the marks3: 50
+Total marks: 200
+Name: Arpit
+USN: 24BCA0488
