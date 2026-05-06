@@ -1,7 +1,6 @@
 AIM:
 The goal of this is to do some simple examination of data and make charts in Python, using Pandas, Matplotlib and Seaborn. We'll do this with functions like info(), sum(), describe(), removing copies of rows, a histogram, a boxplot, a scatterplot and then save the data as a CSV file. 
 
-
 Algorithm:
 Start the program.
 Import pandas, matplotlib.pyplot, and seaborn modules.
