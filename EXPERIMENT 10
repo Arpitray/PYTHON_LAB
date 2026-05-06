@@ -1,0 +1,94 @@
+AIM:
+The goal of this is to do some simple examination of data and make charts in Python, using Pandas, Matplotlib and Seaborn. We'll do this with functions like info(), sum(), describe(), removing copies of rows, a histogram, a boxplot, a scatterplot and then save the data as a CSV file. 
+
+
+Algorithm:
+Start the program.
+Import pandas, matplotlib.pyplot, and seaborn modules.
+Create a sample dataframe.
+Display dataframe information using info().
+Find column-wise sum using sum().
+Remove duplicate rows using drop_duplicates().
+Display statistical summary using describe().
+Plot histogram using hist().
+Plot boxplot using seaborn.
+Plot scatterplot using seaborn.
+Export dataframe to CSV file.
+Display outputs and stop the program.
+
+SOURCE CODE:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Sample dataframe
+data = {
+    "Sex": ["male", "male", "female"],
+    "Age": [22, 38, 26],
+    "SibSp": [1, 1, 0],
+    "Parch": [0, 0, 0],
+    "Fare": [7.25, 71.83, 7.92]
+}
+
+df = pd.DataFrame(data)
+
+# Display information
+print(df.info())
+
+# Sum of columns
+print(df.sum(numeric_only=True))
+
+# Remove duplicates
+df = df.drop_duplicates(inplace=False)
+
+# Statistical description
+print(df.describe())
+
+# Histogram
+plt.figure(figsize=(10, 8))
+plt.suptitle("Histogram")
+df.hist()
+plt.show()
+
+# Boxplot
+plt.figure(figsize=(10, 6))
+sns.boxplot(data=df)
+plt.title("Boxplot")
+plt.xticks(rotation=45)
+plt.show()
+
+# Scatterplot
+sns.pairplot(df)
+plt.show()
+
+# Export to CSV
+df.to_csv("cleaned_data.csv", index=False)
+
+print("CSV file created successfully")
+
+
+OUTPUT:
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 3 entries, 0 to 2
+Data columns (total 5 columns):
+ #   Column  Non-Null Count  Dtype
+---  ------  --------------  -----
+ 0   Sex     3 non-null      object
+ 1   Age     3 non-null      int64
+ 2   SibSp   3 non-null      int64
+ 3   Parch   3 non-null      int64
+ 4   Fare    3 non-null      float64
+
+Age       86.00
+SibSp      2.00
+Parch      0.00
+Fare      86.99
+
+             Age    SibSp  Parch       Fare
+count   3.000000  3.00000    3.0   3.000000
+mean   28.666667  0.66667    0.0  28.996667
+std     8.326664  0.57735    0.0  36.779095
+min    22.000000  0.00000    0.0   7.250000
+max    38.000000  1.00000    0.0  71.830000
+
+CSV file created successfully
